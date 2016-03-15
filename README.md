@@ -1,11 +1,5 @@
-## paraphernalia 
+# PARAPHERNALIA 
 
-To run the dev server : 
-### `npm run dev`
+> Search algorithm based on the formula below.
 
-##Use It
-It can be easily added in your project with git
-```
-npm install
-npm run dev
-```
+> ![alt text](http://ipl.cs.aueb.gr/stougiannis/bm25_formula.png "Logo Title Text 1")
