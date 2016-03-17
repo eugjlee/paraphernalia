@@ -129,7 +129,6 @@ PARAPHERNALIA.prototype.search = function(query) {
     var queryTerms = PARAPHERNALIA.Tokenize(query);
     var results = [];
 
-
     var keys = Object.keys(this.doc);
     for (var j = 0, numberDocs = keys.length; j < numberDocs; j++) {
         var id = keys[j];
@@ -141,7 +140,6 @@ PARAPHERNALIA.prototype.search = function(query) {
         for (var i = 0, len = queryTerms.length; i < len; i++) {
             var queryTerm = queryTerms[i];
 
-   
             if (typeof this.words[queryTerm] === 'undefined') {
                 continue;
             }
@@ -152,7 +150,6 @@ PARAPHERNALIA.prototype.search = function(query) {
 
             // IDF * (TF * (k2 + 1)) / (TF + k2 * (1 - b + b * docLength / avgDocLength))
 
-          
             var identification = this.words[queryTerm].identification;
             var num = this.doc[id].words[queryTerm].count * (this.k2 + 1);
             var denominator = this.doc[id].words[queryTerm].count + (this.k2 * (1 - this.b + (this.b * this.doc[id].termCount / this.avgDocLength)));
